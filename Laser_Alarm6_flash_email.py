@@ -1,5 +1,6 @@
 # Laser Tripwire Alarm with Raspcontroller App and Email Alerts
 # Written By Gary Jefferson
+
 # RC time constant Reference: https://pimylifeup.com/raspberry-pi-light-sensor/
 # Code Logic Reference: https://www.youtube.com/watch?v=4oJiXlPs46o
 # Email Reference: https://www.youtube.com/watch?v=sLjqrXvZvfk&t=311s
