@@ -1,3 +1,9 @@
+# Laser Tripwire Alarm with Raspcontroller App and Email Alerts
+# Written By Gary Jefferson
+# RC time constant Reference: https://pimylifeup.com/raspberry-pi-light-sensor/
+# Code Logic Reference: https://www.youtube.com/watch?v=4oJiXlPs46o
+# Email Reference: https://www.youtube.com/watch?v=sLjqrXvZvfk&t=311s
+
 import RPi.GPIO as GPIO
 import time
 import smtplib
@@ -27,9 +33,9 @@ GPIO.output(5, False)#green3 off
 green_led.off()#green LED turn on  to show the code is running   
 
 #set up email info
-#sender email info
-smtpUser = 'sbob90022@gmail.com'
-smtpPass = 'P!4bobby'
+#sender email info (less secure app access required)
+smtpUser = '*********@gmail.com'    #sender email address
+smtpPass = '********'               #sender email password
 
 #reciever email info
 toAdd = 'jose.garza@sjsu.edu'
