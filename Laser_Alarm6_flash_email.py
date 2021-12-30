@@ -40,7 +40,7 @@ smtpUser = '*********@gmail.com'    #sender email address
 smtpPass = '********'               #sender email password
 
 #reciever email info
-toAdd = 'jose.garza@sjsu.edu'
+toAdd = 'jose.garza@sjsu.edu'   #reciever 1 email address
 fromAdd = smtpUser
 
 #type in the subject
@@ -52,6 +52,7 @@ body = 'Intruder Detected!'
 #display in terminal
 print(header + '\n' + body)
 
+#email function
 def email (smtpUser, smtpPass, fromAdd, toAdd, header, body):
     #establishing connection with email server (gmil.com) 
     s = smtplib.SMTP('smtp.gmail.com',587)
@@ -66,9 +67,10 @@ def email (smtpUser, smtpPass, fromAdd, toAdd, header, body):
     s.sendmail(fromAdd, toAdd, header + '\n\n' + body)
     s.quit()
 
-#define the pin that goes to the circuit
+#define the pin that goes to the circuit (voltage of capacitor)
 pin_to_circuit = 4
 
+#strobe light function
 def flasher (flash):        #function to controll flashing
     while GPIO.input(22):   #while laser is on
         flash.on()
@@ -76,7 +78,7 @@ def flasher (flash):        #function to controll flashing
         flash.off()
         time.sleep(.1)
         
- 
+ #Function to read RC time constant
 def rc_time (pin_to_circuit):
     count = 0
   
