@@ -2,7 +2,7 @@
 
 In order to run the code sucessfully, the circuit muust be built according to the schematic.
 This program is activated using the Raspcontroller App by turning on (setting to 1) GPIO 22. Gpio 22 is the arm/disarm pin which is controlled via the app.
-The program will then: turn on buzzer, turn on Red LED, send an email (or 2) followed by entering a loop that flashes the strobe lights. 
+When triggered, the program will then: turn on buzzer, turn on Red LED, send an email (or 2) followed by entering a loop that flashes the strobe lights. 
 The strobe lights will continue to flash untill GPIO is turned off (setting to 0).
 The sensitivity of the laser alarm is adjusted by the following line of code:
 
